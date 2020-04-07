@@ -7,5 +7,25 @@
   </div>
 </template>
 
+<script>
+import api from "./Api";
+export default {
+  data() {
+    return {}
+  },
+  computed: {
+
+  },
+  methods: {
+
+  },
+  created() {
+    api.initMovies() 
+  },
+}
+
+
+</script>
+
 <style lang="stylus">
 </style>
