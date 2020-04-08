@@ -4,27 +4,23 @@
       <router-link to="/">Home</router-link> |
     </div>
     <router-view/>
+    <moviesList/>
   </div>
 </template>
 
 <script>
-import api from "./Api";
+
+
+import moviesList from "./components/moviesList"
+
 export default {
-  data() {
-    return {}
-  },
-  computed: {
-
-  },
-  methods: {
-
+  components: {
+    moviesList
   },
   created() {
-    api.initMovies() 
+    this.$store.dispatch('initMovies');
   },
 }
-
-
 </script>
 
 <style lang="stylus">
