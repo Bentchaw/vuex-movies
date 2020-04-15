@@ -15,7 +15,7 @@ export default new Vuex.Store({
   },
   mutations: {
     initMovies: (state, payload) => {
-      const moviesData = payload.slice(1,10);
+      const moviesData = payload;
       state.movies = moviesData.map(movie => {
         movie.urlImage = `${BASE_URL_IMG}${movie.poster_path}`
         return movie
